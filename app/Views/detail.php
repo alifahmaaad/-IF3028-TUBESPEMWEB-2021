@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Buat</title>
+	<title>Detail</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
