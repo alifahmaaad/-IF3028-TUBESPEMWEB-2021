@@ -2,19 +2,25 @@
 <html>
 <head>
 	<title>Buat</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<center><h1>SIMPLE LAPOR!</h1></center>
 	<br><br>
-	<p>Buat Laporan/Komentar</p>
+	Buat Laporan/Komentar
 	<hr>
+	<textarea>Laporan/Komentar
+	</textarea>
 	<br>
-	<div class="laporan">
-		Laporan/Komentar
-	</div>
 	<select>
-		<option>Aspek</option>
-	</select>
+		<option>Pilih Aspek Pelaporan/Komentar</option>
+	</select><br>
 	<input type="file" name="">
+	<br>
+	<button>
+		buat LAPOR!
+	</button>
+	<br><br><br><br>
+	<hr>
 </body>
 </html>
