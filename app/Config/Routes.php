@@ -31,9 +31,11 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-$routes->get('/buat', 'buat::index');
-$routes->get('/detail', 'detail::index');
+$routes->get('/', 'home::index');
+$routes->get('/lapor', 'lapor::index');
+$routes->get('detail/edit/(:num)', 'lapor::edit/$1');
+$routes->get('detail/hapus/(:num)', 'lapor::hapus/$1');
+$routes->get('/detail/(:num)', 'lapor::detail/$1');
 
 
 /**
