@@ -1,34 +1,71 @@
-body {
-  margin: 50px;
+body{
+	margin: 50px;
 }
 
-textarea {
-  margin: 0px;
-  height: 213px;
+textarea{
+	margin: 0px; 
+	height: 213px; 
+	width: 974px;
 }
 
-select {
-  margin-top: 15px;
-  margin-bottom: 15px;
+select{
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
-button {
-  width: 120px;
-  height: 40px;
-  float: right;
-  background: white;
+
+.buatLapor{
+	width: 120px;
+	height: 40px;
+	float: right;
+	background: white;
 }
 
-#waktu,
-#aspek {
-  display: inline;
+#waktu, #aspek{
+	display: inline;
 }
 
-a {
-  float: right;
+.hapusKomentar{
+	float: right;
 }
 
-#close {
-  width: 20px;
-  height: 20px;
+#close{
+	width: 20px;
+	height: 20px;
+}
+
+/**** STYLE utama.php ****/
+.searchBar{
+	height: 40px;
+	width: 550px;
+	font-size: 15px
+}
+
+.btnSearch{
+	height: 40px;
+	width: 80px;
+	background-color: white;
+}
+
+.title{
+	margin-bottom: 75px;
+}
+
+.waktuLampiran{
+	float: right;
+	text-align: right;
+}
+
+.laporanTerakhir{
+	margin-top: 70px;
+	margin-bottom: 70px;
+}
+
+.listLaporan{
+	margin-bottom: 50px;
+}
+
+.lihatSelengkapnya{
+	text-decoration-line: none;
+	margin-left: 20px;
 }
