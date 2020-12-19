@@ -14,12 +14,6 @@
         <input type="text" id="searchbar" class="searchBar" placeholder="Apa yang ingin anda cari ?">
         <button class="btnSearch" onclick="cari()">Cari</button>
         <br>
-
-        <form action="" method="POST">
-            <input type="text" name="searchbar" class="searchBar" placeholder="Apa yang ingin anda cari ?" id="search_keyword">
-            <button class="btnSearch" id="btn_cari">Cari</button>
-            <br>
-        </form>
         <a href="<?= base_url('lapor'); ?>">Buat Laporan/Komentar</a>
     </center>
     <br>
@@ -62,7 +56,7 @@
         xhr.onreadystatechange = function() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 document.getElementById('listLaporan').innerHTML = this.responseText;
-                console.log(this.responseText)
+                // console.log(this.responseText)
             }
         }
         xhr.open('GET', url + '?value=' + value, true);
