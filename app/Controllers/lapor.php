@@ -97,4 +97,10 @@ class lapor extends BaseController
 
         return view('home', $data);
     }
+    public function cari()
+    {
+        $x = $_GET['value'];
+        $data['datalapor'] =  $this->lapor_model->cari($x);
+        return view('cari', $data);
+    }
 }
