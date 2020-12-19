@@ -10,6 +10,8 @@ class lapor_Model extends Model
     public $builder;
     protected $table      = 'laporan';
     protected $primaryKey = 'id';
+    protected $useTimestamps = true;
+    protected $allowedFields = ['laporan', 'aspek', 'lampiran'];
 
     public function __construct()
     {
@@ -29,5 +31,14 @@ class lapor_Model extends Model
     {
         return $this->delete($id);
         // getWhere(['id' => $id]);
+    }
+    public function updatelapor($data, $id)
+    {
+        $this->builder = $this->db->table($this->table);
+        return $this->builder->where('id', $id)->update($data);
+    }
+    function semua()
+    {
+        return $this->findAll();
     }
 }

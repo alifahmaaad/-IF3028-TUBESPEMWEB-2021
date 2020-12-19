@@ -17,12 +17,15 @@
 		<?= $datalapor->laporan ?><br><br><br>
 		Lampiran:
 		<br><br>
-		<img src="<?= base_url(); ?>/img/example.png">
+		<img id="imglampiran" src="<?= base_url() . "/" . $datalapor->lampiran ?>">
+		<!-- <img src="<?= base_url(); ?>/img/example.png"> -->
 		<br><br><br>
-		<div id="waktu"></div>
-		<div id="aspek"></div>
-		<a href="<?php echo base_url('detail/hapus/' . $datalapor->id); ?>">Hapus Laporan/Komentar <img id="close" src="<?= base_url(); ?>/img/close.png"></a>
-		<br><br>
+		<div id="waktu">Waktu :<?= $datalapor->created_at ?></div>&nbsp;&nbsp;&nbsp;
+		<div id="aspek">Aspek : <?= $datalapor->aspek ?></div>
+		<a class="tomboledithapus" href="<?php echo base_url('detail/hapus/' . $datalapor->id); ?>">Hapus Laporan/Komentar <b>X</b></a>
+		<a class="tomboledithapus" id="marg" href="<?php echo base_url('detail/edit/' . $datalapor->id); ?>">Edit Laporan/Komentar</a>
+		<br>
+		<hr>
 </body>
 
 </html>
