@@ -4,7 +4,7 @@
 	<title>
 		Halaman Utama
 	</title>
-	<link rel="stylesheet" type="text/css" href=""<?= base_url(); ?>/css/style.csss">
+	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/css/style.css ?>">
 </head>
 <body>
 	<center>
