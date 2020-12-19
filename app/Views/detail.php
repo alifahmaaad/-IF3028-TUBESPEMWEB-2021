@@ -17,7 +17,24 @@
 		<?= $datalapor->laporan ?><br><br><br>
 		Lampiran:
 		<br><br>
-		<img id="imglampiran" src="<?= base_url() . "/" . $datalapor->lampiran ?>">
+		<?php
+		$lampiran = $datalapor->lampiran;
+		$dot = strrpos($lampiran, '.');
+		$extfile = substr($lampiran, $dot + 1);
+		$picext = ['jpeg', 'jpg', 'png', 'svg'];
+		$status = false;
+		foreach ($picext as $ex) {
+			if ($extfile == $picext) {
+				$status = true;
+			}
+		}
+		if ($status == true) {
+			echo '<img id="imglampiran" src="<?= base_url() . "/" . $datalapor->lampiran ?>">';
+		} else {
+			$var = preg_split("#/#", $lampiran);
+			echo $var[count($var) - 1];
+		}
+		?>
 		<!-- <img src="<?= base_url(); ?>/img/example.png"> -->
 		<br><br><br>
 		<div id="waktu">Waktu :<?= $datalapor->created_at ?></div>&nbsp;&nbsp;&nbsp;

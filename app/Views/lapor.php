@@ -44,7 +44,6 @@
 		var laporan = document.getElementById("laporan").value.split(' ');
 		var aspek = document.getElementById("aspek").value;
 		var lampiran = document.getElementById("lampiran").value;
-		var filename = document.getElementById('input-lampiran').value;
 		if (laporan.length < 20) {
 			alert("Field Laporan tidak boleh kurang dari 20 kata");
 		} else if (aspek.length == 0) {
@@ -52,15 +51,15 @@
 		} else if (lampiran.length == 0) {
 			alert("Lampiran harus ada")
 		} else {
-			let splitname = filename.split(".");
+			let splitname = lampiran.split(".");
 			let fileExt = splitname[splitname.length - 1];
+
 			let extension = ['doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'pdf', 'jpg', 'jpeg', 'png'];
 			let same = 0
 			for (i = 0; i < extension.length; i++) {
-				if (splitname[1] == extension[i]) {
-					if (splitname[extension.length - 1] == extension[i]) {
-						same = 1;
-					}
+				if (fileExt == extension[i]) {
+					console.log(fileExt);
+					same = 1;
 				}
 			}
 			if (same == 1) {
